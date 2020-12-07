@@ -1,3 +1,6 @@
+%define _disable_ld_no_undefined 1
+%define _disable_lto 1
+
 Name:		cinema
 Version:	1.0.0
 Release:	1
