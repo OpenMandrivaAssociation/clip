@@ -40,3 +40,6 @@ Cinema is as video player and video collection manager based on Maui Kit.
 %ninja_install -C build
 
 %files
+%{_bindir}/cinema
+%{_datadir}/applications/org.maui.cinema.desktop
+%{_datadir}/icons/*/*/*/*.*
