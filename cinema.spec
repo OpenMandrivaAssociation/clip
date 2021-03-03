@@ -44,6 +44,6 @@ Clip is as video player and video collection manager based on Maui Kit.
 %ninja_install -C build
 
 %files
-%{_bindir}/cinema
+%{_bindir}/clip
 %{_datadir}/applications/org.maui.clip.desktop
 %{_datadir}/icons/*/*/*/*.*
