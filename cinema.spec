@@ -13,6 +13,7 @@ BuildRequires: cmake
 BuildRequires: ninja
 BuildRequires: cmake(Qt5Core)
 BuildRequires: cmake(ECM)
+BuildRequires: cmake(Qt5Multimedia)
 BuildRequires: cmake(Qt5Qml)
 BuildRequires: cmake(Qt5Quick)
 BuildRequires: cmake(Qt5Sql)
