@@ -25,6 +25,9 @@ BuildRequires: cmake(KF5KIO)
 BuildRequires: cmake(KF5Config)
 BuildRequires: cmake(KF5Attica)
 BuildRequires: cmake(MauiKit)
+BuildRequires: pkgconfig(mpv)
+
+Requires: mpv
 
 %description
 Clip is as video player and video collection manager based on Maui Kit.
