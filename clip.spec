@@ -2,7 +2,7 @@
 %define _disable_lto 1
 
 Name:		clip
-Version:	1.1.0
+Version:	2.1.0
 Release:	1
 Summary:	Video player and video collection manager
 Url:      https://invent.kde.org/maui/clip
