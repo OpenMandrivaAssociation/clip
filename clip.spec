@@ -47,5 +47,5 @@ Clip is as video player and video collection manager based on Maui Kit.
 
 %files
 %{_bindir}/clip
-%{_datadir}/applications/org.maui.clip.desktop
+%{_datadir}/applications/org.kde.clip.desktop
 %{_datadir}/icons/*/*/*/*.*
