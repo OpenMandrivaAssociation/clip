@@ -25,6 +25,8 @@ BuildRequires: cmake(KF5KIO)
 BuildRequires: cmake(KF5Config)
 BuildRequires: cmake(KF5Attica)
 BuildRequires: cmake(MauiKit)
+BuildRequires: pkgconfig(libavcodec)
+BuildRequires: pkgconfig(taglib)
 BuildRequires: pkgconfig(mpv)
 
 Requires: mpv
