@@ -1,12 +1,12 @@
-%define _disable_ld_no_undefined 1
-%define _disable_lto 1
+#define _disable_lto 1
+%define snapshot 20220107
 
 Name:		clip
-Version:	2.1.0
-Release:	1
+Version:	2.1.1
+Release:	%{?snapshot:0.%{snapshot}.}1
 Summary:	Video player and video collection manager
-Url:      https://invent.kde.org/maui/clip
-Source0:	https://invent.kde.org/maui/clip/-/archive/v%{version}/%{name}-v%{version}.tar.bz2
+Url:		https://invent.kde.org/maui/clip
+Source0:	https://invent.kde.org/maui/clip/-/archive/%{?snapshot:master}%{!?snapshot:v%{version}}/%{name}-%{?snapshot:master}%{!?snapshot:v%{version}}.tar.bz2%{?snapshot:#/%{name}-%{snapshot}.tar.bz2}
 License:	GPLv3
 Group:		Applications/Video
 BuildRequires: cmake
@@ -35,8 +35,7 @@ Requires: mpv
 Clip is as video player and video collection manager based on Maui Kit.
 
 %prep
-%autosetup -p1 -n %{name}-v%{version}
-
+%autosetup -p1 -n %{name}-%{?snapshot:master}%{!?snapshot:v%{version}}
 %cmake_kde5 -G Ninja
 
 %build
