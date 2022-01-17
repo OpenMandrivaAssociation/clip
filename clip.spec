@@ -1,12 +1,12 @@
-#define _disable_lto 1
 %define snapshot 20220107
 
 Name:		clip
 Version:	2.1.1
-Release:	%{?snapshot:0.%{snapshot}.}1
+Release:	%{?snapshot:0.%{snapshot}.}2
 Summary:	Video player and video collection manager
 Url:		https://invent.kde.org/maui/clip
 Source0:	https://invent.kde.org/maui/clip/-/archive/%{?snapshot:master}%{!?snapshot:v%{version}}/%{name}-%{?snapshot:master}%{!?snapshot:v%{version}}.tar.bz2%{?snapshot:#/%{name}-%{snapshot}.tar.bz2}
+Patch0:		clip-ffmpeg-5.0.patch
 License:	GPLv3
 Group:		Applications/Video
 BuildRequires: cmake

@@ -1,0 +1,13 @@
+diff -up clip-master/src/utils/ffmpegthumbs/moviedecoder.cpp.omv~ clip-master/src/utils/ffmpegthumbs/moviedecoder.cpp
+diff -up clip-master/src/utils/ffmpegthumbs/moviedecoder.h.omv~ clip-master/src/utils/ffmpegthumbs/moviedecoder.h
+--- clip-master/src/utils/ffmpegthumbs/moviedecoder.h.omv~	2022-01-17 03:12:43.384617419 +0100
++++ clip-master/src/utils/ffmpegthumbs/moviedecoder.h	2022-01-17 03:12:53.303670659 +0100
+@@ -57,7 +57,7 @@ private:
+     int                     m_VideoStream;
+     AVFormatContext*        m_pFormatContext;
+     AVCodecContext*         m_pVideoCodecContext;
+-    AVCodec*                m_pVideoCodec;
++    const AVCodec*          m_pVideoCodec;
+ //    AVStream*               m_pVideoStream;
+     AVFrame*                m_pFrame;
+     quint8*                 m_pFrameBuffer;
