@@ -6,12 +6,12 @@ Release:	%{?snapshot:0.%{snapshot}.}3
 Summary:	Video player and video collection manager
 Url:		https://invent.kde.org/maui/clip
 Source0:	https://invent.kde.org/maui/clip/-/archive/%{?snapshot:master}%{!?snapshot:v%{version}}/%{name}-%{?snapshot:master}%{!?snapshot:v%{version}}.tar.bz2%{?snapshot:#/%{name}-%{snapshot}.tar.bz2}
-Patch0:		clip-ffmpeg-5.0.patch
 License:	GPLv3
 Group:		Applications/Video
 BuildRequires: cmake
 BuildRequires: ninja
 BuildRequires: cmake(Qt5Core)
+BuildRequires: cmake(Qt5DBus)
 BuildRequires: cmake(ECM)
 BuildRequires: cmake(Qt5Multimedia)
 BuildRequires: cmake(Qt5Qml)
@@ -19,6 +19,8 @@ BuildRequires: cmake(Qt5Quick)
 BuildRequires: cmake(Qt5Sql)
 BuildRequires: cmake(Qt5Svg)
 BuildRequires: cmake(Qt5QuickControls2)
+BuildRequires: cmake(Qt5Widgets)
+BuildRequires: cmake(KF5CoreAddons)
 BuildRequires: cmake(KF5I18n)
 BuildRequires: cmake(KF5Notifications)
 BuildRequires: cmake(KF5KIO)
