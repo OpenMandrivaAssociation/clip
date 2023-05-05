@@ -47,7 +47,10 @@ Clip is as video player and video collection manager based on Maui Kit.
 %install
 %ninja_install -C build
 
-%files
+%find_lang clip
+
+%files -f clip.lang
 %{_bindir}/clip
 %{_datadir}/applications/org.kde.clip.desktop
+%{_datadir}/metainfo/org.kde.clip.appdata.xml
 %{_datadir}/icons/*/*/*/*.*
