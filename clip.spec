@@ -2,7 +2,7 @@
 
 Name:		clip
 Version:	3.0.0
-Release:	%{?snapshot:0.%{snapshot}.}3
+Release:	%{?snapshot:0.%{snapshot}.}1
 Summary:	Video player and video collection manager
 Url:		https://invent.kde.org/maui/clip
 Source0:	https://invent.kde.org/maui/clip/-/archive/%{?snapshot:master}%{!?snapshot:v%{version}}/%{name}-%{?snapshot:master}%{!?snapshot:v%{version}}.tar.bz2%{?snapshot:#/%{name}-%{snapshot}.tar.bz2}
