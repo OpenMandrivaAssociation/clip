@@ -1,7 +1,7 @@
 #define snapshot 20220107
 
 Name:		clip
-Version:	3.0.0
+Version:	3.0.2
 Release:	%{?snapshot:0.%{snapshot}.}1
 Summary:	Video player and video collection manager
 Url:		https://invent.kde.org/maui/clip
@@ -26,8 +26,8 @@ BuildRequires: cmake(KF5Notifications)
 BuildRequires: cmake(KF5KIO)
 BuildRequires: cmake(KF5Config)
 BuildRequires: cmake(KF5Attica)
-BuildRequires: cmake(MauiKit)
-BuildRequires: cmake(MauiKitFileBrowsing)
+BuildRequires: cmake(MauiKit3)
+BuildRequires: cmake(MauiKitFileBrowsing3)
 BuildRequires: pkgconfig(libavcodec)
 BuildRequires: pkgconfig(taglib)
 BuildRequires: pkgconfig(mpv)
