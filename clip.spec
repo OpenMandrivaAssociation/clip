@@ -1,7 +1,7 @@
 #define snapshot 20220107
 
 Name:		clip
-Version:	4.0.1
+Version:	4.0.2
 Release:	%{?snapshot:0.%{snapshot}.}3
 Summary:	Video player and video collection manager
 Url:		https://invent.kde.org/maui/clip
