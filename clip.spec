@@ -12,6 +12,7 @@ Group:		Applications/Video
 BuildRequires: cmake
 BuildRequires: ninja
 BuildRequires: cmake(Qt6Core)
+BuildRequires: cmake(Qt6Concurrent)
 BuildRequires: cmake(Qt6DBus)
 BuildRequires: cmake(ECM)
 BuildRequires: cmake(Qt6Multimedia)
