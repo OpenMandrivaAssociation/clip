@@ -1,0 +1,29 @@
+diff -up maui-clip-v4.0.2/src/utils/ffmpegthumbs/moviedecoder.cpp.omv~ maui-clip-v4.0.2/src/utils/ffmpegthumbs/moviedecoder.cpp
+--- maui-clip-v4.0.2/src/utils/ffmpegthumbs/moviedecoder.cpp.omv~	2025-09-10 21:41:34.242909432 +0200
++++ maui-clip-v4.0.2/src/utils/ffmpegthumbs/moviedecoder.cpp	2025-09-10 21:48:38.665508950 +0200
+@@ -87,7 +87,6 @@ void MovieDecoder::destroy()
+ {
+     deleteFilterGraph();
+     if (m_pVideoCodecContext) {
+-        avcodec_close(m_pVideoCodecContext);
+         m_pVideoCodecContext = nullptr;
+     }
+ 
+@@ -211,7 +210,7 @@ void MovieDecoder::seek(int timeInSecond
+         }
+ 
+         ++keyFrameAttempts;
+-    } while ((!gotFrame || !m_pFrame->key_frame) && keyFrameAttempts < 200);
++    } while ((!gotFrame || !(m_pFrame->flags & AV_FRAME_FLAG_KEY)) && keyFrameAttempts < 200);
+ 
+     if (gotFrame == 0) {
+         qDebug() << "Seeking in video failed";
+@@ -365,7 +364,7 @@ bool MovieDecoder::processFilterGraph(AV
+ 
+ void MovieDecoder::getScaledVideoFrame(int scaledSize, bool maintainAspectRatio, VideoFrame& videoFrame)
+ {
+-    if (m_pFrame->interlaced_frame) {
++    if (m_pFrame->flags & AV_FRAME_FLAG_INTERLACED) {
+         processFilterGraph((AVFrame*) m_pFrame, (AVFrame*) m_pFrame, m_pVideoCodecContext->pix_fmt,
+                               m_pVideoCodecContext->width, m_pVideoCodecContext->height);
+     }
