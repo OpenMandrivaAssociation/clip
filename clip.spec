@@ -2,7 +2,7 @@
 
 Name:		clip
 Version:	4.0.2
-Release:	%{?snapshot:0.%{snapshot}.}8
+Release:	%{?snapshot:0.%{snapshot}.}9
 Summary:	Video player and video collection manager
 Url:		https://invent.kde.org/maui/maui-clip
 Source0:	https://invent.kde.org/maui/maui-clip/-/archive/%{?snapshot:master}%{!?snapshot:v%{version}}/maui-%{name}-%{?snapshot:master}%{!?snapshot:v%{version}}.tar.bz2%{?snapshot:#/maui-%{name}-%{snapshot}.tar.bz2}
@@ -44,9 +44,8 @@ Clip is as video player and video collection manager based on Maui Kit.
 
 %prep
 %autosetup -p1 -n maui-%{name}-%{?snapshot:master}%{!?snapshot:v%{version}}
-%cmake_kde5 -G Ninja
-
 %build
+%cmake -G Ninja
 %ninja_build -C build
 
 %install
