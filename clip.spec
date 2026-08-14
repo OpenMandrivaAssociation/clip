@@ -46,7 +46,7 @@ Clip is as video player and video collection manager based on Maui Kit.
 %autosetup -p1 -n maui-%{name}-%{?snapshot:master}%{!?snapshot:v%{version}}
 %build
 %cmake -G Ninja
-%ninja_build -C build
+%ninja_build
 
 %install
 %ninja_install -C build
